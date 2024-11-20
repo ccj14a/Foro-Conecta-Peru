@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+
+# Crear una figura y un eje
+fig, ax = plt.subplots()
+
+# Establecer límites del eje
+ax.set_xlim(0, 10)  # Limites del eje X
+ax.set_ylim(0, 10)  # Limites del eje Y
+
+# Opcional: agregar título o etiquetas
+ax.set_title("Graficador de la complejidad temporal")
+ax.set_xlabel("Eje X")
+ax.set_ylabel("Eje Y")
+
+# Mostrar el lienzo vacío
+plt.show()
