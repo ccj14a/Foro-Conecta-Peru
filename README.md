@@ -7,4 +7,5 @@ fomentano la inclusión y el debate
 
 - Java
 - Swing
-- Archivos
+- Neatbeans
+- VS Code
