@@ -56,7 +56,8 @@ public class Mensaje implements Serializable {
 
     public String toString() {
         final String ANSI_PURPLE = "\u001B[35m";
-        final String ANSI_BLUE = "\u001B[34m";
+        //final String ANSI_BLUE = "\u001B[34m";
+        final String ANSI_YELLOW = "\u001B[33m";
         StringBuilder sb = new StringBuilder();
         // Mensaje principal
         sb.append(ANSI_PURPLE)
@@ -74,7 +75,7 @@ public class Mensaje implements Serializable {
         // Comentarios (respuestas) con numeración solo en la respuesta
         int contadorRespuesta = 1; // Para numerar las respuestas
         for (Mensaje respuesta : respuestas) {
-            sb.append(ANSI_BLUE)
+            sb.append(ANSI_YELLOW)
                     .append(String.format("(%d) User: @%-29s", contadorRespuesta++, respuesta.getAutor())) // Numeración
                                                                                                            // en el
                                                                                                            // usuario
@@ -82,7 +83,7 @@ public class Mensaje implements Serializable {
                     .append(String.format("%-20s", respuesta.getFechaHora())) // Alinea la fecha
                     .append(ANSI_RESET).append("\n\n");
 
-            sb.append(ajustarTexto(respuesta.getContenido(), ANSI_BLUE, "    ")) // Ajusta el contenido del comentario
+            sb.append(ajustarTexto(respuesta.getContenido(), ANSI_YELLOW, "    ")) // Ajusta el contenido del comentario
                     .append("\n\n");
         }
 
